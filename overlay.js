@@ -16,6 +16,7 @@ export default class overlay extends Component{
             fadeAnim: new Animated.Value(0),
             overlayStyle: styles.emptyOverlay, //on android opacity=0 also can cover screen, so use overlayStyle fix it
         };
+        this.onAnimatedEnd=this.onAnimatedEnd.bind(this)
     }
     onAnimatedEnd() {
         !this.props.visible&&this.setState({overlayStyle:styles.emptyOverlay});

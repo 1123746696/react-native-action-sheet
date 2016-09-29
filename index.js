@@ -5,17 +5,18 @@
 * @flow-weak
 */
 'use strict';
-var React = require('react');
-var ReactNative = require('react-native');
-var {
+
+
+import React, { Component } from 'react';
+import {
     StyleSheet,
     TouchableOpacity,
     View,
-} = ReactNative;
+} from 'react-native';
 
-var Button = require('./button.js');
-var Overlay = require('./overlay.js');
-var Sheet = require('./sheet.js');
+import Button from './button'
+import Overlay from './overlay'
+import Sheet from './sheet'
 
 module.exports =  React.createClass({
     getDefaultProps: function() {
