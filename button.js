@@ -4,11 +4,12 @@
 */
 'use strict'
 
-var React = require('react-native');
-var { StyleSheet, Text, TouchableOpacity, View } = React;
-
-module.exports = React.createClass({
-    render: function() {
+import React, { Component } from 'react';
+import {
+    StyleSheet, Text, TouchableOpacity, View
+} from 'react-native';
+export default class button extends Component{
+    render() {
         return (
             <TouchableOpacity
                 activeOpacity={0.5}
@@ -20,7 +21,7 @@ module.exports = React.createClass({
             </TouchableOpacity>
         );
     }
-});
+}
 
 var styles = StyleSheet.create({
     buttonText: {

@@ -3,31 +3,32 @@
 * Copyright (c) 2015-2016 YunJiang.Fang <42550564@qq.com>
 */
 'use strict';
-
-var React = require('react-native');
-var { Animated, StyleSheet, View, Dimensions} = React;
+import React, { Component } from 'react';
+import {
+    Animated, StyleSheet, View, Dimensions
+} from 'react-native';
 
 const DEFAULT_BOTTOM = -300;
 const DEFAULT_ANIMATE_TIME = 300;
-
-module.exports = React.createClass({
-    getInitialState: function() {
-        return {
+export default class sheet extends Component{
+    constructor (props) {
+        super (props);
+        this.state={
             bottom: new Animated.Value(DEFAULT_BOTTOM)
-        };
-    },
-    componentWillReceiveProps: function(newProps) {
+        }
+    }
+    componentWillReceiveProps(newProps) {
         return Animated.timing(this.state.bottom, {
             toValue: newProps.visible ? 0 : DEFAULT_BOTTOM,
             duration: DEFAULT_ANIMATE_TIME
         }).start();
-    },
+    }
 
-    render: function() {
+    render() {
         return (
             <Animated.View style={{bottom: this.state.bottom}}>
                 {this.props.children}
             </Animated.View>
         );
     }
-});
+}

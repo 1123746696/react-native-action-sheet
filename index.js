@@ -5,13 +5,13 @@
 * @flow-weak
 */
 'use strict';
-
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
 var {
     StyleSheet,
     TouchableOpacity,
     View,
-} = React;
+} = ReactNative;
 
 var Button = require('./button.js');
 var Overlay = require('./overlay.js');

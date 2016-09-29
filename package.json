@@ -1,12 +1,8 @@
 {
-    "name": "@remobile/react-native-action-sheet",
-        "version": "1.0.1",
+    "name": "react-native-action-sheet",
+        "version": "1.0.2",
         "description": "A pure js ActionSheet like ios ActionSheet, support ios and android",
         "main": "index.js",
-        "author": {
-            "name": "YunJiang.Fang",
-            "email": "42550564@qq.com"
-        },
         "license": "MIT",
         "keywords": [
             "react-native",
@@ -19,12 +15,12 @@
             "remobile",
             "mobile"
         ],
-        "homepage": "https://github.com/remobile/react-native-action-sheet",
+        "homepage": "https://github.com/1123746696/react-native-action-sheet",
         "bugs": {
-            "url": "https://github.com/remobile/react-native-action-sheet/issues"
+            "url": "https://github.com/1123746696/react-native-action-sheet/issues"
         },
         "repository": {
             "type": "git",
-            "url": "git://github.com/remobile/react-native-action-sheet.git"
+            "url": "git://github.com/1123746696/react-native-action-sheet.git"
         }
 }

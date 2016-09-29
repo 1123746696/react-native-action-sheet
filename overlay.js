@@ -4,28 +4,29 @@
 */
 'use strict';
 
-var React = require('react-native');
-var { Animated, StyleSheet, View, Dimensions} = React;
-
+import React, { Component } from 'react';
+import {
+    Animated, StyleSheet, View, Dimensions
+} from 'react-native';
 const DEFAULT_ANIMATE_TIME = 300;
-
-module.exports = React.createClass({
-    getInitialState() {
-        return {
+export default class overlay extends Component{
+    constructor (props) {
+        super (props);
+        this.state={
             fadeAnim: new Animated.Value(0),
             overlayStyle: styles.emptyOverlay, //on android opacity=0 also can cover screen, so use overlayStyle fix it
         };
-    },
+    }
     onAnimatedEnd() {
         !this.props.visible&&this.setState({overlayStyle:styles.emptyOverlay});
-    },
+    }
     componentWillReceiveProps(newProps) {
         newProps.visible&&this.setState({overlayStyle: styles.fullOverlay});
         return Animated.timing(this.state.fadeAnim, {
             toValue: newProps.visible ? 1 : 0,
             duration: DEFAULT_ANIMATE_TIME
         }).start(this.onAnimatedEnd);
-    },
+    }
 
     render() {
         return (
@@ -34,9 +35,9 @@ module.exports = React.createClass({
             </Animated.View>
         );
     }
-});
+}
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
     fullOverlay: {
         top: 0,
         bottom: 0,
