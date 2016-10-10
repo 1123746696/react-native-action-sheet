@@ -37,8 +37,8 @@ module.exports =  React.createClass({
                             {this.props.children}
                         </View>
                         <Button
-                            buttonStyle={{marginTop:6, borderRadius:6}}
-                            textStyle={{color:'red'}}
+                            buttonStyle={{marginTop:10, borderRadius:7}}
+                            textStyle={{color:'#007cf9'}}
                             onPress={this.props.onCancel}>{this.props.cancelText}</Button>
                     </Sheet>
                 </View>
@@ -52,12 +52,11 @@ var styles = StyleSheet.create({
     actionSheetContainer: {
         flex: 1,
         padding: 10,
-        paddingBottom: 6,
         justifyContent: "flex-end",
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     buttonContainer: {
-        borderRadius:6,
+        borderRadius:7,
         overflow: 'hidden',
     }
 });

@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet, Text, TouchableOpacity, View
+    StyleSheet, Text, TouchableOpacity, View,PixelRatio,
 } from 'react-native';
 export default class button extends Component{
     render() {
@@ -25,16 +25,17 @@ export default class button extends Component{
 
 var styles = StyleSheet.create({
     buttonText: {
-        color: '#0069d5',
+        color: '#007cf9',
         alignSelf: 'center',
-        fontSize: 18
+        fontSize: 16
     },
     button: {
-        height: 40,
+        height: 49,
         backgroundColor: 'white',
-        borderColor: 'gray',
-        borderBottomWidth: 1,
+        borderColor: '#eeeeee',
+        borderBottomWidth: 1/PixelRatio.get(),
         alignSelf: 'stretch',
+        marginBottom:1/PixelRatio.get(),
         justifyContent: 'center'
     }
 });
